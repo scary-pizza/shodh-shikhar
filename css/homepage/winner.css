@@ -156,6 +156,7 @@
 }
 
 .table-container {
+  max-height: 42.3rem;
   overflow-x: auto;
   font-size: 1.3rem;
 }
