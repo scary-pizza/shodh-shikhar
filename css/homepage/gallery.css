@@ -1,0 +1,240 @@
+.gallery-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  font-family: var(--ff-jakarta);
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+  background-color: #F1F1F1;
+  padding-top: 2rem;
+  border-radius: 2rem;
+  margin-bottom: 15rem;
+}
+
+.gallery-text {
+  /* flex: 1 1 40%; */
+  position: relative;
+  width: 40%;
+  padding: 2rem 0 2rem 5rem;
+}
+
+.gallery-section .gallery-container .gallery-text .section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-section .gallery-container .gallery-text .section-header .section-subtitle {
+  font-family: var(--ff-pacifico);
+  color: var(--primary-clr);
+  font-size: 1.4rem;
+}
+
+.gallery-section .gallery-container .gallery-text .section-header .section-header-img {
+  width: 2rem;
+}
+
+.gallery-text .section-title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+.gallery-section .gallery-container .gallery-text .gallery-text-para strong {
+  color: var(--primary-clr);
+}
+
+.gallery-section .gallery-container .gallery-text .show-less {
+    background-color: var(--primary-clr);
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 2rem;
+    color: var(--white);
+    padding: 1rem 1.9rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-text p {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  text-align: justify;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.gallery-slider-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    margin-top: 5rem;
+    /* overflow: hidden; */
+}
+
+.gallery-slider {
+  flex: 1 1 55%;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-track {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 100%;
+  position: relative;
+  gap: 1rem;
+}
+
+
+.gallery-slide {
+  flex: 0 0 33.333%;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  position: relative;
+  text-align: center;
+  z-index: 0;
+}
+
+
+.gallery-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 2;
+}
+
+.gallery-slide.exit-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 1;
+}
+
+.gallery-slide img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.gallery-slide h4 {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.gallery-slide p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.gallery-controls {
+  /* position: absolute; */
+  bottom: 1rem;
+  left: 50%;
+  /* transform: translateX(-50%); */
+  display: flex;
+  gap: 1rem;
+  justify-self: end;
+  padding-right: 1rem;
+}
+
+.gallery-controls button {
+  width: 70px;
+} 
+
+.gallery-controls button img{
+  width: 81%;
+}
+
+@media screen and (min-width: 1700px) {
+
+  .gallery-section {
+    padding: 4rem 6.5rem;
+  }
+
+  .gallery-section .gallery-container .gallery-text .show-less {
+    font-size: 1.8rem;
+  }
+
+  .gallery-section .gallery-container .gallery-text .section-header .section-subtitle {
+    font-size: 2.5rem;
+  }
+
+  .gallery-section .gallery-container .gallery-text .section-header .section-header-img {
+    width: 3.7rem;
+  }
+
+  .gallery-text .section-title {
+    font-size: 3.7rem
+  }
+
+  .gallery-text p {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  .gallery-controls button {
+    font-size: 3.5rem;
+  }
+
+  .gallery-slide img {
+    min-height: 62rem;
+  }
+
+  .gallery-slide h4 {
+    font-size: 2.5rem;
+  }
+
+  .gallery-slide p {
+    font-size: 1.8rem;
+  }
+
+  .gallery-text {
+    width: 38%;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    flex-direction: column;
+  }
+
+  .gallery-slider {
+    width: 100%;
+  }
+
+  .gallery-slider-wrapper {
+    position: static;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.gallery-text {
+    position: relative;
+    width: 100%;
+}
+}
+
+@media screen and (max-width: 480px) {
+  .gallery-slide {
+    flex: 0 0 100%;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    position: relative;
+    text-align: center;
+    z-index: 0;
+}
+
+.gallery-section
+ {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    font-family: var(--ff-jakarta);
+}
+}

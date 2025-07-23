@@ -1,0 +1,502 @@
+/* Navbar css writen on common css ------------------------------------------------------------ */
+
+/* (max-width: 1700px) and (min-width: 1024px) Responsive */ 
+
+/* Hero */
+
+@media screen and (max-width: 1700px) and (min-width: 1024px){
+    .hero-slider{
+        height: 60rem;
+        padding: .2rem 4rem;
+        
+    }
+}
+
+/* announcement */
+
+@media screen and (max-width: 1700px) and (min-width: 1024px){
+    .announcement-bar{
+        padding: 2.5rem 1rem;
+    }
+}
+
+/* marquee */
+
+@media screen and (max-width: 1700px) and (min-width: 1024px){
+    .marquee-section-container {
+        padding: 0 4rem;
+    }
+}
+
+
+/* overview */
+
+@media screen and (max-width: 1700px) and (min-width: 1024px){
+    .overview-description {
+        font-size: 1.6rem;
+    }
+    .unique-title{
+        font-size: 2.5rem;
+    }
+    .overview-list li{
+        font-size: 1.6rem;
+    }
+    .overview-image img{
+        width: 83rem;
+    }
+    .overview-image {
+    right: 3.3rem;
+    }
+}
+
+/* events */
+
+@media screen and (max-width: 1700px) and (min-width: 1024px){
+    .events-section{
+        padding: 4rem 6rem;
+    }
+    .image-grid{
+        height: 20rem;
+    }
+    .card-body {
+        height: 35rem;
+    }
+    .events-grid .event-card .event-card-title{
+        padding: 1rem;
+    }
+    .events-grid .event-card .card-body .highlight-title{
+        font-size: 1.4rem;
+    }
+    .events-grid .event-card .card-body ul span{
+        font-size: 1.1rem;
+    }
+    .events-grid .event-card .card-body ul li {
+        font-size: 1.3rem;
+    }   
+    .events-grid .event-card .card-body .btn{
+        bottom: 2rem;
+    }
+}
+
+/* category */
+
+@media screen and (max-width: 1700px) and (min-width: 1024px){
+    .category-section .color-gray{
+        padding: 3rem 5rem;
+    }
+    .category-image{
+        max-width: 47rem;
+    }
+}
+
+/* .showcasing */
+
+@media screen and (max-width: 1700px) and (min-width: 1024px){
+    .showcasing-section{
+        padding: 3rem 6rem;
+    }
+    .impact-list li{
+        font-size: 1.3rem;
+    }
+
+}
+
+/* .publications */
+
+@media screen and (max-width: 1700px) and (min-width: 1024px){
+    .publications-section{
+        padding: 3rem 5rem;
+    }
+    .pub-image img{
+        width: 40rem;
+    }
+    .pub-image::before{
+        left: 2.7rem;
+    }
+}
+
+/* host-university */
+
+@media screen and (max-width: 1700px) and (min-width: 1024px){
+    .inner-background{
+        padding: 3rem 5rem;
+    }
+
+    .host-university .co-sponsor-section .sponsor-grid .sponsor-card .image-slider{
+        width: 100%;
+        height: 100%;
+    }
+
+    .host-university .co-sponsor-section .sponsor-grid .sponsor-card .image-slider img{
+        height: 100%;
+    }
+}
+
+/* .reviews */
+
+@media screen and (max-width: 1700px) and (min-width: 1024px){
+    .reviews{
+        padding: 3rem 5rem;
+    }
+    .testimonial-video-carousel{
+        height: 55rem;
+        align-items: center;
+    }
+}
+
+/* .gallery */
+
+@media screen and (max-width: 1700px) and (min-width: 1024px){
+    .gallery-section{
+        padding: 3rem 5rem;
+    }
+    .gallery-slide img {
+        min-height: 500px;
+        max-height: 501px;
+    }
+    .gallery-text {
+        width: 38%;
+        padding: 2rem 0 2rem 3rem;
+    }
+    .gallery-text p{
+        line-height: 2.4rem;
+    }
+    .gallery-controls button{
+        width: 60px;
+    }
+    .gallery-controls button img{
+        width: 80%;
+    }
+
+}
+
+
+/* (max-width: 700px) and (min-width: 200px) Responsive */ 
+
+/* Hero */
+
+@media screen and (max-width: 700px) and (min-width: 200px){
+    .hero-slider{
+        height: 50rem;
+        padding: 0rem 1rem;
+    }
+    .slide-caption {
+        bottom: 3rem;
+        left: 1rem;
+        max-width: 90%;
+        padding: 0;
+        display: block;
+    }
+    .swiper-wrapper .swiper-slide .slide-caption h2{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    .swiper-wrapper .swiper-slide .slide-caption h2.hero-para{
+        font-size: 1.1rem;
+        line-height: 2rem;
+    }
+}
+
+/* marquee */
+
+@media screen and (max-width: 700px) and (min-width: 200px){
+    .marquee-section-container {
+        padding: 0rem 1rem;
+    }
+        .announcement-bar{
+        padding: 1rem 1rem;
+    }
+}
+
+/* overview */
+
+@media screen and (max-width: 700px) and (min-width: 200px){
+    .overview-section{
+        padding: 1rem 2rem;
+    }
+    .overview-content{
+        margin: 0;
+    }
+    .overview-content .overview-label-container{
+        justify-content: center;
+    }
+    .overview-title-container{
+        flex-direction:row;
+        justify-content: center;
+    }
+    .overview-title{
+        text-align: center;
+    }
+    .overview-subtitle{
+        text-align: center;
+    }
+    .overview-description{
+        text-align: justify;
+        font-size: 1.4rem;
+    }
+    .overview-list{
+        padding: 1rem;
+        margin-left: 1.5rem;
+    }
+    .overview-list li{
+        font-size: 1.4rem;
+        text-align: justify;
+    }
+}
+
+
+/* events */
+@media screen and (max-width: 700px) and (min-width: 200px){
+    .events-section{
+        padding: 1rem 1rem;
+    }
+    .events-heading{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .image-grid{
+        height: 25rem;
+        padding: 1rem;
+    }
+    .card-body {
+        height: 32rem;
+        padding: 0rem 2rem;
+    }
+    .events-grid .event-card .event-card-title{
+        padding: 1rem;
+    }
+    .events-grid .event-card .card-body .highlight-title{
+        font-size: 1.4rem;
+    }
+    .events-grid .event-card .card-body ul span{
+        font-size: 1.1rem;
+    }
+    .events-grid .event-card .card-body ul li {
+        font-size: 1.3rem;
+    }   
+    .events-grid .event-card .card-body .btn{
+        bottom: 1rem;
+    }
+}
+
+/* category */
+
+@media screen and (max-width: 700px) and (min-width: 200px){
+    .category-section{
+        padding: 1rem 1rem;
+    }
+    .category-section .color-gray{
+        padding: 1rem 1rem;
+    }
+    .category-item img{
+        width: 5rem;
+        height: 5rem;
+    }
+    .category-image{
+        max-width: 47rem;
+    }
+    .category-item p{
+        font-size: 1.4rem;
+    }
+}
+
+/* .showcasing */
+
+@media screen and (max-width: 700px) and (min-width: 200px){
+    .showcasing-section{
+        padding: 1rem 2rem;
+    }
+    .announcement-bar-for-showcasing{
+        padding: 0;
+    }
+    .marquee-section-container-for-showcasing{
+        padding: 0;
+    }
+    .showcasing-section-top-part, .showcasing-section-bottom-part , .showcasing-section{
+        gap: 2rem;
+    }
+    .showcasing-content-heading, .showcasing-content-title{
+        text-align: center;
+    }
+    .showcasing-content-top-paragraph{
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-weight: normal;
+    }
+    .showcasing-subtitle{
+        font-size: 1.6rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        line-height: 2.2rem;
+    }
+    .showcasing-img-section2::before{
+        bottom: -1rem;
+        right: 1rem;
+    }
+    
+    .impact-list li{
+        font-size: 1.3rem;
+    }
+}
+
+/* .publications */
+
+@media screen and (max-width: 700px) and (min-width: 200px){
+    .publications-section{
+        padding: 1rem 2rem;
+    }
+    .pub-content{
+        margin-left: 0;
+    }
+    .pub-content .pub-subheading{
+        justify-content: center;
+    }
+    .pub-title {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .pub-intro{
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    .logo-content p {
+        font-size: 1.8rem;
+    }
+    .featured-logos {
+        display: flex;
+        flex-direction: column;
+    }
+    .pub-container{
+        gap: 1rem;
+    }
+    .pub-image img{
+        width: 27rem;
+    }
+    .pub-image::before{
+        left: .7rem;
+    }
+}
+
+/* host-university */
+
+@media screen and (max-width: 700px) and (min-width: 200px){
+    .inner-background{ 
+        padding: 1rem 1.5rem;
+    }
+    .host-university .host-content .about-rntu .about-description{
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+    }
+    .host-university .co-sponsor-section{
+        padding: 0;
+        margin: 1rem 0 0 0;
+    }
+    .host-university .co-sponsor-section .co-sponsor-logos{
+        margin-top: 1rem;
+    }
+    .host-university .co-sponsor-section .co-sponsor-logos img{
+        width: 10rem;
+    }
+    .host-university .co-sponsor-section .sponsor-grid .sponsor-card .image-slider{
+        width: 100%;
+        height: 100%;
+    }
+    .host-university .co-sponsor-section .sponsor-grid .sponsor-card .image-slider img{
+        height: 100%;
+    }
+}
+
+/* .reviews */
+
+@media screen and (max-width: 700px) and (min-width: 200px){
+    .reviews{
+        padding: 1rem 1rem;
+    }
+    .inner-reviews{
+        padding: 1.5rem 1rem;
+    }
+    .testimonial-video-carousel{
+        border-radius: 2rem;
+        min-height: 48rem;
+        max-height: 49rem;
+        align-items: center;
+    }
+    .testimonial-text{
+        border-radius: 2rem;
+        padding: 1rem;
+    }
+    .testimonial-slide .text1, .testimonial-slide .text2{
+        font-size: 1.4rem;
+        line-height: 2.3rem;
+    }
+}
+
+/* .gallery */
+
+@media screen and (max-width: 700px) and (min-width: 200px){
+    .gallery-section{
+        padding: 1rem 1.5rem;
+    }
+    .gallery-section .gallery-container .gallery-text .section-header{
+       justify-content: center;
+    }
+    .gallery-text .section-title{
+        text-align: center;
+    }
+
+    .gallery-slider-wrapper{
+        margin-top: 0rem;
+        padding: .5rem;
+    }
+    .gallery-controls{
+        gap: 0;
+        padding: 0;
+        margin-right: -2rem;
+    }
+    .gallery-container{
+        margin-bottom: 0;
+    }
+
+    .gallery-slide img {
+        min-height: 500px;
+        max-height: 501px;
+    }
+    .gallery-text {
+        width: 95%;
+        padding: 1rem 1rem;
+    }
+    .gallery-text p{
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+    .gallery-controls button{
+        width: 60px;
+    }
+    .gallery-controls button img{
+        width: 80%;
+    }
+
+}
+
+/* .winner */
+
+@media screen and (max-width: 700px) and (min-width: 200px){
+    .winner-section{
+        padding: 1rem 1rem;
+    }
+    .year-tabs-container{
+        justify-content: center;
+    }
+    .year-tab{
+        padding: 1rem 1rem;
+    }
+    .year-tabs{
+        flex-flow: wrap;
+    }
+}
+
+/* announcement bar for showcasing css writen on common css ------------------------------------------------------------ */
+
+/* Footer css writen on common css ------------------------------------------------------------ */

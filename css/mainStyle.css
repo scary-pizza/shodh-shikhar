@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--ff-jakarta);
+  font-weight: 500;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 62.5%;
+  font-family: var(--ff-jakarta);
+  font-weight: 500;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  background-color: #EAEAEA80;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: fit-content;
+}
+
+a {
+  text-decoration: none;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-clr);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sky-blue);
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --blue: #4e00b2;
+  --primary-clr: #002B5B;
+  --ecom-primary-txt: #333;
+  --primary-black: #161616;
+  --primary-blue: #007bff;
+  --salty-orange: #FFA800;
+  --royal-blue: #8A0BFF;
+  --sky-blue: #129BBC;
+  --dark-purple: #7928ca;
+  --purple-pink: #DF40C9;
+  --lovely-pink: #fc185a;
+  --nature-green: #1CC967;
+  --danger-red: #DC4546;
+  --text-light: #F7F7F7;
+  --text-primary: #ddd;
+  --text-primary2: #333;
+  --text-secondary: #8d9eb5;
+  --text-light-primary: #8d9eb5;
+  --text-light-primary2: #61748f;
+  --ff-manrope: "Manrope", sans-serif;
+  --ff-rambhadra: "Ramabhadra", sans-serif;
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-pacifico: "Pacifico", cursive;
+  --ff-ubuntu: "Ubuntu", sans-serif;
+  --ff-playpen: "Playpen Sans", cursive;
+  --ff-jakarta: "Plus Jakarta Sans", sans-serif;
+  --ff-roboto: "Roboto", sans-serif;
+  --ff-spline: "Spline Sans", sans-serif;
+  --ff-salsa: "Salsa", cursive;
+  --ff-rambla: "Rambla", sans-serif;
+  --ff-dmsans: "DM Sans", sans-serif;
+  --ff-ponnalla: "Ponnala", system-ui;
+  --ff-actor: "Actor", sans-serif;
+  --ff-abeezee: "ABeeZee", sans-serif;
+  --ff-pristina: "Pristina", cursive;
+  --ff-sf-compact: "SF Compact Text", sans-serif;
+  --ff-saira: "Saira SemiCondensed", sans-serif;
+  --ff-inter: "Inter", sans-serif;
+  --ff-playfair: "Playfair Display SC", serif;
+  --ff-heebo: "Heebo", sans-serif;
+  --ff-jersey: "Jersey 25", sans-serif;
+  --ff-rubik: "Rubik", sans-serif;
+  --ff-ibm: "IBM Plex Sans", sans-serif;
+  --ff-nato: "Noto Sans", sans-serif;
+  --card-radius: 10px;
+  --ss-border: 2px solid #4a3d93;
+  --ss-light-shadow: var(--primary-clr) 0px 2px 8px 0px;
+  --inner-gap: 2.4rem;
+  --loader-color: #129BBC;
+  /* --card-bg: #fff; */
+  --side-width: 28rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.space {
+  margin: 2rem 0 !important;
+}
+
+.section-head-title {
+  font-size: 3.4rem;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.main-page-padding {
+  padding: 0 2.2rem;
+  box-sizing: border-box;
+  
+}
+
+@media (max-width: 768px) {
+  .space {
+  margin: 1rem 0 !important;
+}
+}
+
+@media (max-width: 480px) {
+  .section-head-title {
+    font-size: 3rem;
+  }
+}
+
+/* main content starts here */
+
+/* header css */
+
+.nav-link {
+  font-size: 1.4rem;
+  color: var(--primary-black);
+  font-weight: 500;
+  margin: 0 1rem;
+}
+
+.nav-link:hover {
+  color: var(--primary-clr);
+}
+
+.btn-custom {
+  font-size: 1.4rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 2rem;
+  font-weight: 500;
+}
+
+.btn-login {
+  background-color: #031b3d;
+  color: white;
+}
+
+.btn-register {
+  background-color: #031b3d;
+  color: white;
+  margin-right: 1rem;
+}
+
+.navbar-brand img {
+  max-height: 60px;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    margin: 0.5rem 0;
+  }
+  .btn-register {
+    margin: 0 0.5rem 0.5rem 0;
+  }
+}

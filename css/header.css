@@ -1,0 +1,198 @@
+.header {
+  /* background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  padding: 1.2rem 2.2rem;
+  /* position: sticky;
+  top: 0;
+  z-index: 999; */
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+  height: 6rem;
+  width: auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: white;
+  padding: 2rem 2rem;
+  border-radius: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-clr);
+}
+
+/* Dropdown menu */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 2.4rem;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 0.5rem 0;
+  min-width: 150px;
+  border-radius: 0.5rem;
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  color: var(--primary-black);
+  font-size: 1.3rem;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  font-size: 1.4rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.register {
+  background-color: var(--primary-clr);
+  color: white;
+}
+
+.login {
+  background-color: var(--primary-clr);
+  color: white;
+}
+
+/* Hamburger for mobile */
+.hamburger {
+  display: none;
+  font-size: 2.6rem;
+  background: none;
+  color: var(--primary-black);
+}
+
+.nav-link.active {
+  background-color: var(--primary-clr);
+  color: white;
+  padding: 1.1rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 400;
+}
+
+.nav-link.active:hover {
+  color: white;
+}
+
+@media screen and (min-width: 1700px) {
+  .nav-links a, .btn {
+    font-size: 1.5rem;
+  }
+
+  .btn{
+    padding: 1.2rem 2.4rem;
+  }
+
+  .header {
+    padding: 2rem 3.5rem;
+}
+
+.logo img {
+    height: 8rem;
+} 
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .navbar.show-nav {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 1rem 0;
+    display: block;
+    width: 100%;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo img {
+    height: 4rem;
+  }
+}

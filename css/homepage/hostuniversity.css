@@ -1,0 +1,372 @@
+.host-university {
+  background-color: #FFFFFF;
+}
+
+.inner-background{
+  background-color: #F1F1F1;
+  padding: 4rem 2.2rem;
+  text-align: center;
+  border-radius: 2rem;
+}
+
+.host-university .section-subheading .section-subtitle {
+    color: var(--primary-clr);
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: var(--ff-pacifico);
+}
+
+.host-university .section-subheading .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000000;
+    margin-top: 0.5rem;
+    font-family: var(--ff-ubuntu);
+}
+
+.host-university .host-slider-wrapper {
+    margin-top: 3rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 2rem;
+}
+
+.host-university .host-slider-wrapper .slider-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  height: 100%;
+}
+
+.host-university .host-slider-wrapper .slider-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.host-university .host-slider-wrapper .slider-logo-container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.host-university .host-slider-wrapper .slider-logo-container .slider-title {
+    position: relative; /* Important for pseudo-element positioning */
+    /* bottom: 10rem;
+    left: 5%; */
+    color: #2B2A29;
+    font-size: 6rem;
+    font-weight: 700;
+    font-family: var(--ff-jakarta);
+    z-index: 10;
+    background-color: #F1F1F1;
+    width: 41%;
+    border-top-right-radius: 2rem;
+    padding: 1rem; /* Optional padding for visual spacing */
+}
+
+/* .host-university .host-slider-wrapper .slider-logo-container .slider-title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    background-color: white; /* Match the page background
+    border-bottom-left-radius: 2rem; 
+    z-index: 30;
+} */
+
+
+/* .host-university .host-slider-wrapper .slider-logo-container::before {
+    content: "About";
+    position: absolute;
+    bottom: 9rem;
+    left: 0;
+    background-color: #F1F1F1;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2B2A29;
+    font-size: 7rem;
+    font-weight: 700;
+    font-family: var(--ff-jakarta);
+    padding: 0 2rem;
+    border-top-right-radius: 2rem;
+
+} */
+
+.host-university .host-slider-wrapper .slider-logo {
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    width: 50rem;
+    z-index: 5;
+    background: #F1F1F1;
+    border-top-right-radius: 2rem;
+    padding: 1rem;
+}
+
+.host-university .host-content .about-rntu .about-description {
+    margin-top: 2rem;
+    color: #2B2A29;
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-family: var(--ff-jakarta);
+    text-align: left;
+    line-height: 3rem;
+}
+
+.host-university .co-sponsor-section {
+  padding: 4rem 4rem 0;
+  margin: 0 2rem 0;
+  font-family: var(--ff-popins);
+}
+
+.host-university .co-sponsor-section .section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: var(--ff-ubuntu);
+}
+
+.host-university .co-sponsor-section .sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.host-university .co-sponsor-section .sponsor-grid .sponsor-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  padding: 1rem;
+}
+
+.host-university .co-sponsor-section .sponsor-grid .sponsor-card .image-slider {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.host-university .co-sponsor-section .sponsor-grid .sponsor-card .image-slider .image-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.host-university .co-sponsor-section .sponsor-grid .sponsor-card .image-slider img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.host-university .co-sponsor-section .sponsor-grid .sponsor-card .image-slider .slider-btn {
+  position: absolute;
+  bottom: 0.5rem;
+  transform: translateY(-50%);
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.3rem;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  z-index: 2;
+}
+
+.host-university .co-sponsor-section .sponsor-grid .sponsor-card .image-slider .slider-btn.prev {
+  left: 10px;
+}
+
+.host-university .co-sponsor-section .sponsor-grid .sponsor-card .image-slider .slider-btn.next {
+  right: 10px;
+}
+
+.host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content .sponsor-logo {
+  width: 12rem;
+}
+
+.host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content  h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin:1rem 0;
+}
+
+.host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content  p {
+  font-size: 1.25rem;
+  margin-bottom:0.5rem;
+  color: #555;
+}
+
+.host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content  ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #222;
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+.host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content  ul li{
+ padding: .8rem 0;
+}
+
+.host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content  ul li::marker {
+    color: var(--primary-clr);
+}
+
+.host-university .co-sponsor-section .co-sponsor-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+}
+
+.host-university .co-sponsor-section .co-sponsor-logos img {
+  width: 34rem;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 1700px) {
+
+  .host-university {
+    padding: 4rem 3.5rem;
+  }
+
+  .host-university .host-slider-wrapper {
+    height: 45rem;
+  }
+
+  .host-university .host-slider-wrapper .slider-logo {
+    width: 70rem;
+  }
+
+  .host-university .host-content .about-rntu .about-description {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  .host-university .host-slider-wrapper .slider-logo-container .slider-title {
+    width: 60%;
+    font-size: 9rem;
+  }
+
+  .host-university .section-subheading .section-subtitle {
+    font-size: 2.5rem;
+  }
+
+  .host-university .section-subheading .section-title, .host-university .co-sponsor-section .section-title {
+    font-size: 3.7rem;
+  }
+
+  .host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content .sponsor-logo {
+    width: 21rem;
+  }
+
+  .host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content p {
+    font-size: 1.6rem;
+  }
+
+  .host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content h3 {
+    font-size: 2rem;
+  }
+
+  .host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content ul {
+    font-size: 1.6rem;
+  }
+
+  .host-university .co-sponsor-section .sponsor-grid .sponsor-card .image-slider img, .host-university .co-sponsor-section .sponsor-grid .sponsor-card .image-slider {
+    height: 30rem;
+  }
+
+  .host-university .co-sponsor-section .sponsor-grid .sponsor-card .image-slider .slider-btn {
+    font-size: 4rem;
+    padding: 0.5rem 2.3rem;
+  }
+
+  .host-university .co-sponsor-section .sponsor-grid .sponsor-card {
+    align-items: center;
+  }
+
+  .host-university .co-sponsor-section .co-sponsor-logos {
+    justify-content: space-evenly;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .host-university .host-slider-wrapper {
+    height: 180px;
+  }
+
+  .host-university .host-slider-wrapper .slider-track img {
+    height: 180px;
+  }
+
+  .host-university .host-slider-wrapper .slider-logo-container .slider-title {
+    font-size: 3rem;
+    width: 24%;
+  }
+
+  .host-university .host-slider-wrapper .slider-logo {
+    width: 29rem;
+  }
+
+  .host-university .co-sponsor-section .sponsor-grid .sponsor-card {
+    flex-direction: column;
+  }
+
+  .host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content {
+    padding: 1rem;
+  }
+
+  .host-university .co-sponsor-section .co-sponsor-logos img {
+    width: 14rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .host-university {
+    padding: 2rem 1rem;
+  }
+
+  .host-university .host-slider-wrapper .slider-logo-container .slider-title {
+    font-size: 2rem;
+    width: 17%;
+  }
+
+  .host-university .host-slider-wrapper .slider-logo {
+        width: 20rem;
+    }
+  
+  .host-university .host-content .about-rntu .about-description {
+    text-align: justify;
+  }
+
+  .host-university .co-sponsor-section .sponsor-grid {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.host-university .co-sponsor-section {
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+}
+}

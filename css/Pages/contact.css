@@ -1,0 +1,265 @@
+.contact-section {
+  padding: 4rem 10rem;
+  font-family: "Poppins", sans-serif;
+  background-color: #fdfdfd;
+  color: #111;
+  margin: auto;
+  font-family: var(--ff-jakarta);
+}
+
+.contact-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: stretch;
+  margin-bottom: 4rem;
+}
+
+.contact-form h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.contact-form .highlight {
+  color: #ffaa2e;
+}
+
+.contact-form p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.flex-for{
+  flex-basis: 40%;
+}
+
+
+.contact-map {
+  flex-basis: 58%;
+  min-width: 300px;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1.5rem solid var(--primary-clr);
+}
+
+.contact-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 12rem 10rem 13rem 0;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 45%;
+}
+
+.contact-info h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info h4 {
+  margin-top: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.contact-info p {
+  margin-top: 0.3rem;
+  font-size: 1.8rem;
+  color: #444;
+}
+
+.contact-gallery {
+  flex: 1;
+  min-width: 280px;
+  height: 100%;
+  position: relative;
+}
+
+.contact-gallery img {
+  width: 30rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: absolute;
+}
+
+.contact-gallery-1 {
+  top: 0rem;
+  right: 0rem;
+  z-index: 1;
+}
+.contact-gallery-2 {
+  top: -5rem;
+  left: 13rem;
+  z-index: 1;
+}
+.contact-gallery-3 {
+  bottom: -59rem;
+  right: 6rem;
+  z-index: 2;
+}
+.contact-gallery-4 {
+  bottom: -48rem;
+  left: 8.5rem;
+  z-index: 2;
+}
+
+/* Tabs (max-width: 1700px) and (min-width: 1024px)*/
+
+@media screen and (max-width: 1700px) and (min-width: 1024px){
+  
+  .contact-gallery-1 {
+    top: 0rem;
+    right: -5rem;
+    z-index: 1;
+  }
+  .contact-gallery-2 {
+    top: -5rem;
+    left: 6rem;
+    z-index: 1;
+  }
+  .contact-gallery-3 {
+    bottom: -59rem;
+    right: -1rem;
+    z-index: 2;
+  }
+  .contact-gallery-4 {
+    bottom: -56rem;
+    left: 1.5rem;
+    z-index: 2;
+  }
+}
+
+/* Tabs (max-width: 1200px) and (min-width: 200px)*/
+
+@media screen and (max-width: 1200px) and (min-width: 200px){
+  .contact-map, .flex-for{
+    flex-basis: 100%;
+  }
+
+  .contact-gallery-1, .contact-gallery-2, .contact-gallery-3, .contact-gallery-4{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .contact-info h3,
+  .contact-info h4 {
+    font-size: 2rem;
+  }
+  .contact-info p {
+    font-size: 1.5rem;
+  }
+  .contact-gallery img {
+    width: 18rem;
+  }
+  .contact-gallery-2 {
+    top: -1rem;
+  }
+  .contact-gallery-1 {
+    top: 5rem;
+  }
+  .contact-gallery-4 {
+    bottom: -35rem;
+  }
+  .contact-gallery-3 {
+    bottom: -42rem;
+    right: 7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 4rem 0 4rem 3rem;
+  }
+
+  .contact-form input, .contact-form textarea {
+    font-size: 1.5rem;
+  }
+
+  .contact-form h2 {
+    font-size: 3rem;
+  }
+
+  .contact-form p,
+  .contact-info p {
+    font-size: 1.2rem;
+  }
+
+  .contact-gallery img {
+    width: 15rem;
+  }
+
+  .contact-info {
+    gap: 1rem;
+  }
+
+  .contact-gallery-1 {
+    right: -7rem;
+  }
+
+  .contact-gallery-4 {
+        bottom: -29.5rem;
+        left: -1.5rem;
+    }
+
+    .contact-gallery-2 {
+        left: 5rem;
+    }
+    .contact-gallery-3 {
+        bottom: -35.5rem;
+        right: 0rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .contact-section {
+        padding: 1.5rem;
+    }
+
+    .contact-top {
+        flex-direction: column;
+    }
+
+    .contact-map {
+        border: 0.5rem solid var(--primary-clr);
+    }
+
+    .contact-bottom {
+        padding: 0;
+    }
+
+  .contact-gallery img {
+    position: static;
+    width: 100%;
+  }
+
+  .contact-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-form button, .contact-form, .contact-form form {
+    width: 100%;
+  }
+}
