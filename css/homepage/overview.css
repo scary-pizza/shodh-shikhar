@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   padding: 4rem 2.2rem;
-  overflow-x: hidden;
 }
 
 .overview-container {
@@ -175,6 +174,14 @@
 }
 
 /* About shodh Shikhar Page css end */
+
+/* overview-section  (max-width: 1400px) and (min-width: 200px) */
+
+@media screen and (max-width: 1400px) and (min-width: 200px){
+.overview-section {
+  overflow-x: hidden;
+}
+}
 
 @media screen and (min-width: 1700px) {
   .overview-content {
