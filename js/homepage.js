@@ -621,10 +621,10 @@ if (document.querySelector(".winner-section")) {
       <div class="table-controls">
       <div class="download-icons">
   <button class="download-btn pdf" title="Download as PDF">
-    <img src="./public/homepage/icons/pdf.png" alt="PDF" style="width: 20px;" /> 
+    <img src="https://scary-pizza.github.io/shodh-shikhar/public/homepage/icons/pdf.png" alt="PDF" style="width: 20px;" /> 
   </button>
   <button class="download-btn excel" title="Download as Excel">
-    <img src="./public/homepage/icons/file.png" alt="Excel" style="width: 20px;"/>
+    <img src="https://scary-pizza.github.io/shodh-shikhar/public/homepage/icons/file.png" alt="Excel" style="width: 20px;"/>
   </button>
 </div>
 
