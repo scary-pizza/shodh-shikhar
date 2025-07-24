@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../public/fonts/stylesheet.css" />
     <link rel="stylesheet" href="../css/Pages/Register.css">
     <link rel="stylesheet" href="../css/homepage/showcasing.css" />
+    <link rel="stylesheet" href="../css/Pages/popup.css" />
     <!-- Responsive css -->
     <link rel="stylesheet" href="../css/homepage/media.css" />
     <title>Shodh Shikhar</title>
@@ -60,6 +61,101 @@
     <button class="hamburger" id="hamburger">&#9776;</button>
     </div>
 </header>
+
+    <!-- Popup -->
+    <!-- Login Modal -->
+    <div id="loginModal" class="login-modal">
+        <div class="login-modal-content">
+            <button class="close-btn" id="closeLoginModal">×</button>
+
+            <div class="login-container">
+                <div class="login-left">
+                    <h2>Login</h2>
+                    <p>We are glad to see you back with us</p>
+
+                    <div id="otpSection">
+
+
+                        <!-- Mobile Input -->
+                        <div class="groups-input" id="mobileInput">
+                            <label for="registerNumber">Enter Register Number</label>
+                            <div class="input-group border-style">
+                                <select class="select-style">
+                                    <option value="+91">+91</option>
+                                </select>
+                                <input type="text" name="mobile" class="in-style" id="registerNumber"
+                                    placeholder="7024393158">
+                                <button class="otp-btn">Get OTP</button>
+                            </div>
+                            <button onclick="showEmail()">useEmail</button>
+                            <!-- <a type="button" id="UseEmail" class="justify-content-right">Login with Email</a> -->
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="groups-input" id="emailInput" style="display: none;">
+                            <label for="email">Enter Email Address</label>
+                            <div class="input-group border-style">
+                                <input type="email" name="email" class="in-style" id="registeremail"
+                                    placeholder="alias@domain.ext">
+                                <button class="otp-btn">Get OTP</button>
+                            </div>
+                            <button onclick="showMobile()">usePhone</button>
+                            <!-- <a type="button" id="UseMobile" class="justify-content-right">Login with Mobile</a> -->
+                        </div>
+
+                        <div class="groups-input" id="otpInput">
+                            <label for="otp">Enter OTP</label>
+                            <div class="otp-box">
+                                <input class="otp-input " maxlength="1" type="text">
+                                <input class="otp-input " maxlength="1" type="text">
+                                <input class="otp-input " maxlength="1" type="text">
+                                <input class="otp-input " maxlength="1" type="text">
+                                <input class="otp-input " maxlength="1" type="text">
+                                <input class="otp-input " maxlength="1" type="text">
+                            </div>
+                        </div>
+                        <p class="resend">Didn't receive the OTP? <a href="#"> Resend OTP</a></p>
+                    </div>
+                    <div id="passwordSection" style="display: none;">
+
+
+                        <!-- UserName Input -->
+                        <div class="groups-input " id="userInput">
+                            <label for="email">Enter Email Address</label>
+                            <div class="input-group border-style">
+                                <input type="text" name="username" class="in-style"
+                                    placeholder="UserName Or Email Address">
+                            </div>
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="groups-input " id="passwordInput">
+                            <label for="password">Enter Email Address</label>
+                            <div class="input-group border-style">
+                                <input type="password" name="password" class="in-style" placeholder="alias@domain.ext">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <button class="submit-btn">Submit</button>
+
+                    <div class="or"> <span>Login</span> with Others</div>
+
+                    <div class="alt-buttons">
+                        <button class="alt-btn" id="passwordBtn" onclick="showPasswordSection()">Login with Password</button>
+                        <button class="alt-btn" id="otpBtn" onclick="showOtpSection()" style="display: none;">Login with OTP</button>
+                        <button class="alt-btn">Register as a New</button>
+                    </div>
+                </div>
+
+                <div class="login-right">
+                    <img src="../public/homepage/aboutss1.jpg" alt="Login Image">
+                </div>
+            </div>
+        </div>
+    </div>
 
 <!-- Tabs Stepper -->
 <section class="contact-section">
