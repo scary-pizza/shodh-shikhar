@@ -660,71 +660,71 @@ if (document.querySelector(".winner-section")) {
 
 // ========== 3. Tab Switching ==========
 if (document.querySelector(".winner-section")) {
-const yearTabs = document.querySelectorAll(".year-tab");
-const allYearContents = document.querySelectorAll(".year-content");
+  const yearTabs = document.querySelectorAll(".year-tab");
+  const allYearContents = document.querySelectorAll(".year-content");
 
-yearTabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    document.querySelector(".year-tab.active")?.classList.remove("active");
-    tab.classList.add("active");
+  yearTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      document.querySelector(".year-tab.active")?.classList.remove("active");
+      tab.classList.add("active");
 
-    const year = tab.dataset.year;
-    allYearContents.forEach((content) => {
-      content.classList.remove("active");
+      const year = tab.dataset.year;
+      allYearContents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      const activeContent = document.querySelector(
+        `.year-content[data-year="${year}"]`
+      );
+      activeContent.classList.add("active");
+
+      setActiveInnerTab(activeContent, "paper");
+    });
+  });
+
+  function setActiveInnerTab(container, type) {
+    const innerTabs = container.querySelectorAll(".inner-tab");
+    innerTabs.forEach((tab) => {
+      tab.classList.remove("active");
+      if (tab.dataset.type === type) tab.classList.add("active");
     });
 
-    const activeContent = document.querySelector(
-      `.year-content[data-year="${year}"]`
-    );
-    activeContent.classList.add("active");
-
-    setActiveInnerTab(activeContent, "paper");
-  });
-});
-
-function setActiveInnerTab(container, type) {
-  const innerTabs = container.querySelectorAll(".inner-tab");
-  innerTabs.forEach((tab) => {
-    tab.classList.remove("active");
-    if (tab.dataset.type === type) tab.classList.add("active");
-  });
-
-  renderTable(container, type);
-}
+    renderTable(container, type);
+  }
 }
 
 // ========== 4. Table Rendering ==========
 if (document.querySelector(".winner-section")) {
-function renderTable(container, type) {
-  const year = container.dataset.year;
-  const data = winnerData[year][type] || [];
+  function renderTable(container, type) {
+    const year = container.dataset.year;
+    const data = winnerData[year][type] || [];
 
-  let currentPage = 1;
-  let rowsPerPage = 5;
+    let currentPage = 1;
+    let rowsPerPage = 5;
 
-  const rowsSelector = container.querySelector(".rows-per-page");
-  if (rowsSelector) {
-    rowsSelector.addEventListener("change", () => {
-      rowsPerPage = parseInt(rowsSelector.value);
-      currentPage = 1;
-      displayPage(currentPage);
-    });
-  }
+    const rowsSelector = container.querySelector(".rows-per-page");
+    if (rowsSelector) {
+      rowsSelector.addEventListener("change", () => {
+        rowsPerPage = parseInt(rowsSelector.value);
+        currentPage = 1;
+        displayPage(currentPage);
+      });
+    }
 
-  let filteredData = [...data];
+    let filteredData = [...data];
 
-  const searchInput = container.querySelector(".search-input");
-  const tbody = container.querySelector("tbody");
-  const pagination = container.querySelector(".pagination");
+    const searchInput = container.querySelector(".search-input");
+    const tbody = container.querySelector("tbody");
+    const pagination = container.querySelector(".pagination");
 
-  function displayPage(page) {
-    const start = (page - 1) * rowsPerPage;
-    const end = start + rowsPerPage;
-    const pageData = filteredData.slice(start, end);
+    function displayPage(page) {
+      const start = (page - 1) * rowsPerPage;
+      const end = start + rowsPerPage;
+      const pageData = filteredData.slice(start, end);
 
-    tbody.innerHTML = pageData
-      .map(
-        (row, index) => `
+      tbody.innerHTML = pageData
+        .map(
+          (row, index) => `
       <tr>
         <td>${start + index + 1}.</td>
         <td>${row.name}</td>
@@ -732,142 +732,142 @@ function renderTable(container, type) {
         <td>${row.dept}</td>
       </tr>
     `
-      )
-      .join("");
+        )
+        .join("");
 
-    renderPagination();
-  }
-
-  function renderPagination() {
-    const totalPages = Math.ceil(filteredData.length / rowsPerPage);
-    pagination.innerHTML = "";
-
-    // Don't show pagination if only 1 page
-    if (totalPages <= 1) return;
-
-    const createButton = (text, page, isActive = false, disabled = false) => {
-      const btn = document.createElement("button");
-      btn.textContent = text;
-      if (isActive) btn.classList.add("active");
-      if (disabled) btn.disabled = true;
-      btn.addEventListener("click", () => {
-        currentPage = page;
-        displayPage(currentPage);
-      });
-      return btn;
-    };
-
-    // First and Prev
-    pagination.appendChild(createButton("«", 1, false, currentPage === 1));
-    pagination.appendChild(
-      createButton("‹", currentPage - 1, false, currentPage === 1)
-    );
-
-    // Visible pages logic
-    const maxVisible = 3;
-    let startPage = Math.max(1, currentPage - 1);
-    let endPage = Math.min(totalPages, startPage + maxVisible - 1);
-    if (endPage - startPage < maxVisible - 1) {
-      startPage = Math.max(1, endPage - maxVisible + 1);
+      renderPagination();
     }
 
-    if (startPage > 1) {
-      pagination.appendChild(createButton("1", 1, currentPage === 1));
-      if (startPage > 2) pagination.appendChild(createEllipsis());
-    }
+    function renderPagination() {
+      const totalPages = Math.ceil(filteredData.length / rowsPerPage);
+      pagination.innerHTML = "";
 
-    for (let i = startPage; i <= endPage; i++) {
-      pagination.appendChild(createButton(i, i, currentPage === i));
-    }
+      // Don't show pagination if only 1 page
+      if (totalPages <= 1) return;
 
-    if (endPage < totalPages) {
-      if (endPage < totalPages - 1) pagination.appendChild(createEllipsis());
+      const createButton = (text, page, isActive = false, disabled = false) => {
+        const btn = document.createElement("button");
+        btn.textContent = text;
+        if (isActive) btn.classList.add("active");
+        if (disabled) btn.disabled = true;
+        btn.addEventListener("click", () => {
+          currentPage = page;
+          displayPage(currentPage);
+        });
+        return btn;
+      };
+
+      // First and Prev
+      pagination.appendChild(createButton("«", 1, false, currentPage === 1));
       pagination.appendChild(
-        createButton(totalPages, totalPages, currentPage === totalPages)
+        createButton("‹", currentPage - 1, false, currentPage === 1)
+      );
+
+      // Visible pages logic
+      const maxVisible = 3;
+      let startPage = Math.max(1, currentPage - 1);
+      let endPage = Math.min(totalPages, startPage + maxVisible - 1);
+      if (endPage - startPage < maxVisible - 1) {
+        startPage = Math.max(1, endPage - maxVisible + 1);
+      }
+
+      if (startPage > 1) {
+        pagination.appendChild(createButton("1", 1, currentPage === 1));
+        if (startPage > 2) pagination.appendChild(createEllipsis());
+      }
+
+      for (let i = startPage; i <= endPage; i++) {
+        pagination.appendChild(createButton(i, i, currentPage === i));
+      }
+
+      if (endPage < totalPages) {
+        if (endPage < totalPages - 1) pagination.appendChild(createEllipsis());
+        pagination.appendChild(
+          createButton(totalPages, totalPages, currentPage === totalPages)
+        );
+      }
+
+      // Next and Last
+      pagination.appendChild(
+        createButton("›", currentPage + 1, false, currentPage === totalPages)
+      );
+      pagination.appendChild(
+        createButton("»", totalPages, false, currentPage === totalPages)
       );
     }
 
-    // Next and Last
-    pagination.appendChild(
-      createButton("›", currentPage + 1, false, currentPage === totalPages)
-    );
-    pagination.appendChild(
-      createButton("»", totalPages, false, currentPage === totalPages)
-    );
-  }
+    function createEllipsis() {
+      const span = document.createElement("span");
+      span.textContent = "...";
+      span.className = "ellipsis";
+      return span;
+    }
 
-  function createEllipsis() {
-    const span = document.createElement("span");
-    span.textContent = "...";
-    span.className = "ellipsis";
-    return span;
-  }
+    searchInput.addEventListener("input", () => {
+      const keyword = searchInput.value.toLowerCase();
+      filteredData = data.filter(
+        (row) =>
+          row.name.toLowerCase().includes(keyword) ||
+          row.title.toLowerCase().includes(keyword) ||
+          row.dept.toLowerCase().includes(keyword)
+      );
+      currentPage = 1;
+      displayPage(currentPage);
+    });
 
-  searchInput.addEventListener("input", () => {
-    const keyword = searchInput.value.toLowerCase();
-    filteredData = data.filter(
-      (row) =>
-        row.name.toLowerCase().includes(keyword) ||
-        row.title.toLowerCase().includes(keyword) ||
-        row.dept.toLowerCase().includes(keyword)
-    );
-    currentPage = 1;
     displayPage(currentPage);
-  });
-
-  displayPage(currentPage);
-}
+  }
 }
 
 // ========== 5. Inner Tab Event Bind ==========
 if (document.querySelector(".winner-section")) {
-document.querySelectorAll(".year-content").forEach((container) => {
-  const tabs = container.querySelectorAll(".inner-tab");
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const type = tab.dataset.type;
-      setActiveInnerTab(container, type);
+  document.querySelectorAll(".year-content").forEach((container) => {
+    const tabs = container.querySelectorAll(".inner-tab");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const type = tab.dataset.type;
+        setActiveInnerTab(container, type);
+      });
     });
-  });
 
-  // Initial render for paper tab
-  renderTable(container, "paper");
-});
+    // Initial render for paper tab
+    renderTable(container, "paper");
+  });
 }
 
 // ========== 6. Export Buttons ==========
 if (document.querySelector(".winner-section")) {
-document.querySelectorAll(".year-content").forEach((container) => {
-  const table = container.querySelector("table");
-  const year = container.dataset.year;
+  document.querySelectorAll(".year-content").forEach((container) => {
+    const table = container.querySelector("table");
+    const year = container.dataset.year;
 
-  // PDF Export Button
-  const pdfBtn = container.querySelector(".download-btn.pdf");
-  if (pdfBtn) {
-    pdfBtn.addEventListener("click", () => {
-      const type = container.querySelector(".inner-tab.active").dataset.type;
-      const { jsPDF } = window.jspdf;
-      const doc = new jsPDF();
+    // PDF Export Button
+    const pdfBtn = container.querySelector(".download-btn.pdf");
+    if (pdfBtn) {
+      pdfBtn.addEventListener("click", () => {
+        const type = container.querySelector(".inner-tab.active").dataset.type;
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
 
-      if (doc.autoTable) {
-        doc.autoTable({ html: table });
-        doc.save(`${year}-${type}-winners.pdf`);
-      } else {
-        alert("PDF export failed: autoTable plugin is not available.");
-      }
-    });
-  }
+        if (doc.autoTable) {
+          doc.autoTable({ html: table });
+          doc.save(`${year}-${type}-winners.pdf`);
+        } else {
+          alert("PDF export failed: autoTable plugin is not available.");
+        }
+      });
+    }
 
-  // Excel Export Button
-  const excelBtn = container.querySelector(".download-btn.excel");
-  if (excelBtn) {
-    excelBtn.addEventListener("click", () => {
-      const type = container.querySelector(".inner-tab.active").dataset.type;
-      const wb = XLSX.utils.table_to_book(table);
-      XLSX.writeFile(wb, `${year}-${type}-winners.xlsx`);
-    });
-  }
-});
+    // Excel Export Button
+    const excelBtn = container.querySelector(".download-btn.excel");
+    if (excelBtn) {
+      excelBtn.addEventListener("click", () => {
+        const type = container.querySelector(".inner-tab.active").dataset.type;
+        const wb = XLSX.utils.table_to_book(table);
+        XLSX.writeFile(wb, `${year}-${type}-winners.xlsx`);
+      });
+    }
+  });
 }
 
 // Contact section javascript
@@ -927,26 +927,26 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("authorsWrapper").appendChild(row);
     });
 
-    const data = localStorage.getItem('shodhForm')
-    const dataObj = JSON.parse(data)
-    console.log(dataObj)
+    const data = localStorage.getItem("shodhForm");
+    const dataObj = JSON.parse(data);
+    console.log(dataObj);
 
-    const firstName = document.getElementById('confFirstName')
-    const lastName = document.getElementById('confLastName')
-    const email = document.getElementById('confEmail')
-    const mobile = document.getElementById('confMobile')
-    const category = document.getElementById('confCategory')
-    const theme = document.getElementById('confTheme')
-    const citizenship = document.getElementById('confCitizen')
+    const firstName = document.getElementById("confFirstName");
+    const lastName = document.getElementById("confLastName");
+    const email = document.getElementById("confEmail");
+    const mobile = document.getElementById("confMobile");
+    const category = document.getElementById("confCategory");
+    const theme = document.getElementById("confTheme");
+    const citizenship = document.getElementById("confCitizen");
 
-    if(dataObj) {
-      firstName.value = dataObj.firstName || "Field Required"
-      lastName.value = dataObj.lastName || "Field Required"
-      email.value = dataObj.email || "Field Required"
-      mobile.value = dataObj.mobile || "Field Required"
-      category.value = dataObj.category || "Field Required"
-      theme.value = dataObj.theme || "Field Required"
-      citizenship.value = dataObj.citizenship || "Field Required"
+    if (dataObj) {
+      firstName.value = dataObj.firstName || "Field Required";
+      lastName.value = dataObj.lastName || "Field Required";
+      email.value = dataObj.email || "Field Required";
+      mobile.value = dataObj.mobile || "Field Required";
+      category.value = dataObj.category || "Field Required";
+      theme.value = dataObj.theme || "Field Required";
+      citizenship.value = dataObj.citizenship || "Field Required";
     }
 
     // Submit
@@ -971,16 +971,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = JSON.parse(localStorage.getItem("shodhForm"));
       if (!data) return;
       Object.entries(data).forEach(([k, v]) => {
-  const els = form.querySelectorAll(`[name="${k}"]`);
-  els.forEach(el => {
-    if (el.type === 'radio') {
-      el.checked = el.value === v;
-    } else {
-      el.value = v;
-    }
-  });
-});
-
+        const els = form.querySelectorAll(`[name="${k}"]`);
+        els.forEach((el) => {
+          if (el.type === "radio") {
+            el.checked = el.value === v;
+          } else {
+            el.value = v;
+          }
+        });
+      });
     }
 
     restoreProgress();
@@ -1002,3 +1001,83 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// login javascript
+
+if (document.querySelector(".login-modal")) {
+  document.addEventListener("DOMContentLoaded", () => {
+    const loginBtn = document.querySelector(".btn.login");
+    const loginModal = document.getElementById("loginModal");
+    const closeLoginModal = document.getElementById("closeLoginModal");
+    const otpInputs = document.querySelectorAll(".otp-box input");
+
+    // Show/hide login modal
+    if (loginBtn && loginModal && closeLoginModal) {
+      loginBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        loginModal.style.display = "flex";
+        otpInputs[0]?.focus(); // Focus first input
+      });
+
+      closeLoginModal.addEventListener("click", () => {
+        loginModal.style.display = "none";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === loginModal) {
+          loginModal.style.display = "none";
+        }
+      });
+    }
+
+    // OTP input behavior
+    otpInputs.forEach((input, index) => {
+      input.addEventListener("input", () => {
+        const value = input.value;
+        if (value && index < otpInputs.length - 1) {
+          otpInputs[index + 1].focus();
+        }
+      });
+
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Backspace" && !input.value && index > 0) {
+          otpInputs[index - 1].focus();
+        }
+      });
+
+      // Optional: restrict to digits only
+      input.addEventListener("keypress", (e) => {
+        if (!/[0-9]/.test(e.key)) {
+          e.preventDefault();
+        }
+      });
+    });
+  });
+}
+
+// Login Popup display none or block
+
+function showEmail() {
+  document.getElementById("mobileInput").style.display = "none";
+  document.getElementById("emailInput").style.display = "block";
+}
+
+function showMobile() {
+  document.getElementById("emailInput").style.display = "none";
+  document.getElementById("mobileInput").style.display = "block";
+}
+
+function showPasswordSection() {
+  document.getElementById("otpSection").style.display = "none";
+  document.getElementById("passwordSection").style.display = "block";
+  document.getElementById("passwordBtn").style.display = "none";
+
+  document.getElementById("otpBtn").style.display = "block";
+}
+
+function showOtpSection() {
+  document.getElementById("passwordSection").style.display = "none";
+  document.getElementById("otpSection").style.display = "block";
+  document.getElementById("otpBtn").style.display = "none";
+  document.getElementById("passwordBtn").style.display = "block";
+}

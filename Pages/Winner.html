@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Swiper CSS -->
@@ -9,189 +10,288 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Common css for navbar and footer -->    
+    <!-- Common css for navbar and footer -->
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/mainStyle.css" />
     <link rel="stylesheet" href="../public/fonts/stylesheet.css" />
     <link rel="stylesheet" href="../css/homepage/winner.css" />
     <link rel="stylesheet" href="../css/homepage/showcasing.css" />
-<!-- Responsive css -->   
+    <link rel="stylesheet" href="../css/Pages/popup.css">
+    <!-- Responsive css -->
     <link rel="stylesheet" href="../css/homepage/media.css">
     <title>Shodh Shikhar</title>
-  </head>
+</head>
+
 <body>
 
-<!-- header section -->
+    <!-- header section -->
 
-<header class="header">
-    <div class="header-container">
-    <a href="../index.html" class="logo">
-        <img
-        src="../public/static/shodh-shikhar-logo.png"
-        alt="Shodh Shikhar"
-        />
-    </a>
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <img src="../public/static/shodh-shikhar-logo.png" alt="Shodh Shikhar" />
+            </a>
 
-    <nav class="navbar" id="navbar">
-        <ul class="nav-links">
-        <li><a href="../index.html" class="nav-link">HOME</a></li>
-        <li class="dropdown">
-            <a href="#">ABOUT &#9662; </a>
-              <ul class="dropdown-menu">
-                <li><a href="About shodh shikhar.html">About shodh shikhar</a></li>
-                <li><a href="Patron.html">Patron Message</a></li>
-                <li><a href="Patron.html">Co-Patron Message</a></li>
-                <li><a href="Patron.html">Director Research Message</a></li>
-              </ul>
-        </li>
-        <li><a href="#speaker" class="nav-link">SPEAKER</a></li>
-        <li><a href="Winner.html" class="nav-link">WINNER</a></li>
-        <li>
-            <a href="#commercial" class="nav-link">COMMERCIALIZATION</a>
-        </li>
-        <li><a href="#contact" class="nav-link">CONTACTS</a></li>
-        </ul>
-        <div class="nav-buttons">
-        <a href="Register.html" class="btn register">Register</a>
-        <a href="#" class="btn login">Login</a>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-links">
+                    <li><a href="../index.html" class="nav-link">HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#">ABOUT &#9662; </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="About shodh shikhar.html">About shodh shikhar</a></li>
+                            <li><a href="Patron.html">Patron Message</a></li>
+                            <li><a href="Patron.html">Co-Patron Message</a></li>
+                            <li><a href="Patron.html">Director Research Message</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#speaker" class="nav-link">SPEAKER</a></li>
+                    <li><a href="Winner.html" class="nav-link">WINNER</a></li>
+                    <li>
+                        <a href="#commercial" class="nav-link">COMMERCIALIZATION</a>
+                    </li>
+                    <li><a href="Contact.html" class="nav-link">CONTACTS</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="Register.html" class="btn register">Register</a>
+                    <a href="#" class="btn login">Login</a>
+                </div>
+            </nav>
+
+            <button class="hamburger" id="hamburger">&#9776;</button>
         </div>
-    </nav>
+    </header>
 
-    <button class="hamburger" id="hamburger">&#9776;</button>
-    </div>
-</header>
-    
-<!-- Banner -->
-<section class="banner">
-    <img src="../public/homepage/Banner.jpg">
-</section>
+    <!-- Popup -->
+    <!-- Login Modal -->
+    <div id="loginModal" class="login-modal">
+        <div class="login-modal-content">
+            <button class="close-btn" id="closeLoginModal">×</button>
 
-<!-- Winners Section -->
-<section class="winner-section">
-    <div class="section-subheading">
-    <h3 class="section-subtitle">Winners</h3>
-    <h2 class="section-title">Shodh Shikhar Winner Lists</h2>
-    </div>
+            <div class="login-container">
+                <div class="login-left">
+                    <h2>Login</h2>
+                    <p>We are glad to see you back with us</p>
 
-    <!-- Year Tabs -->
-    <div class="year-tabs-container">
-    <div class="year-tabs">
-        <button class="year-tab active" data-year="2025"> <span><img src="../public/homepage/icons/Group 39569.png" alt=""></span> Winner 2025</button>
-        <button class="year-tab" data-year="2024"> <span><img src="../public/homepage/icons/Group 39569.png" alt=""></span> Winner 2024</button>
-        <button class="year-tab" data-year="2023"> <span><img src="../public/homepage/icons/Group 39569.png" alt=""></span> Winner 2023</button>
-        <button class="year-tab" data-year="2022"> <span><img src="../public/homepage/icons/Group 39569.png" alt=""></span> Winner 2022</button>
-        <button class="year-tab" data-year="2021"> <span><img src="../public/homepage/icons/Group 39569.png" alt=""></span> Winner 2021</button>
-    </div>
-    </div>
+                    <div id="otpSection">
 
-    <!-- Year Tables Container -->
-    <div class="year-tables-wrapper">
-    <!-- Year content will be dynamically injected by JS -->
-    </div>
-</section>
 
-<!-- Announcement Marquee -->
-<section class="marquee-section-container-for-showcasing">
-    <section class="announcement-bar-for-showcasing">
-    <div class="marquee-wrapper-for-showcasing">
-        <div class="marquee-content-for-showcasing">
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
-        <span>shodh shikhar 2025</span>
+                        <!-- Mobile Input -->
+                        <div class="groups-input" id="mobileInput">
+                            <label for="registerNumber">Enter Register Number</label>
+                            <div class="input-group border-style">
+                                <select class="select-style">
+                                    <option value="+91">+91</option>
+                                </select>
+                                <input type="text" name="mobile" class="in-style" id="registerNumber"
+                                    placeholder="7024393158">
+                                <button class="otp-btn">Get OTP</button>
+                            </div>
+                            <button onclick="showEmail()">useEmail</button>
+                            <!-- <a type="button" id="UseEmail" class="justify-content-right">Login with Email</a> -->
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="groups-input" id="emailInput" style="display: none;">
+                            <label for="email">Enter Email Address</label>
+                            <div class="input-group border-style">
+                                <input type="email" name="email" class="in-style" id="registeremail"
+                                    placeholder="alias@domain.ext">
+                                <button class="otp-btn">Get OTP</button>
+                            </div>
+                            <button onclick="showMobile()">usePhone</button>
+                            <!-- <a type="button" id="UseMobile" class="justify-content-right">Login with Mobile</a> -->
+                        </div>
+
+                        <div class="groups-input" id="otpInput">
+                            <label for="otp">Enter OTP</label>
+                            <div class="otp-box">
+                                <input class="otp-input " maxlength="1" type="text">
+                                <input class="otp-input " maxlength="1" type="text">
+                                <input class="otp-input " maxlength="1" type="text">
+                                <input class="otp-input " maxlength="1" type="text">
+                                <input class="otp-input " maxlength="1" type="text">
+                                <input class="otp-input " maxlength="1" type="text">
+                            </div>
+                        </div>
+                        <p class="resend">Didn't receive the OTP? <a href="#"> Resend OTP</a></p>
+                    </div>
+                    <div id="passwordSection" style="display: none;">
+
+
+                        <!-- UserName Input -->
+                        <div class="groups-input " id="userInput">
+                            <label for="email">Enter Email Address</label>
+                            <div class="input-group border-style">
+                                <input type="text" name="username" class="in-style"
+                                    placeholder="UserName Or Email Address">
+                            </div>
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="groups-input " id="passwordInput">
+                            <label for="password">Enter Email Address</label>
+                            <div class="input-group border-style">
+                                <input type="password" name="password" class="in-style" placeholder="alias@domain.ext">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <button class="submit-btn">Submit</button>
+
+                    <div class="or"> <span>Login</span> with Others</div>
+
+                    <div class="alt-buttons">
+                        <button class="alt-btn" id="passwordBtn" onclick="showPasswordSection()">Login with Password</button>
+                        <button class="alt-btn" id="otpBtn" onclick="showOtpSection()" style="display: none;">Login with OTP</button>
+                        <button class="alt-btn">Register as a New</button>
+                    </div>
+                </div>
+
+                <div class="login-right">
+                    <img src="../public/homepage/aboutss1.jpg" alt="Login Image">
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Banner -->
+    <section class="banner">
+        <img src="../public/homepage/Banner.jpg">
     </section>
-</section>
 
-<!-- footer section -->
-<footer class="footer-section">
+    <!-- Winners Section -->
+    <section class="winner-section">
+        <div class="section-subheading">
+            <h3 class="section-subtitle">Winners</h3>
+            <h2 class="section-title">Shodh Shikhar Winner Lists</h2>
+        </div>
 
-    <div class="footer-section-clip-path">
-    <div class="footer-section-clip-path-img">
-        <img src="../public/homepage/footer-clip-img.png" alt="">
-    </div>
-    </div>
-    <div class="footer-container">
-    <!-- Left -->
-    <div class="footer-left">
-    <h2>Our Address</h2>
-    <div class="footer-contact">
-        <p>
-        <img src="../public/homepage/icons/footer-location-icon.png" alt="">
-        <span>Rabindranath Tagore University<br />
-        Mendua, Post: Bhopal, Near Bangrasia Chauraha,
-        Bhopal–Chiklod Road, Bhopal (M.P.)</span>
-        </p>
-        <h2>Contact Details</h2>
-        <p>
-        <img src="../public/homepage/icons/footer-contact-icon.png" alt="">
-        <span>Visit Wensite or Call us <br>
-        <span>shodhshikhar@rntuniversity.ac.in / 0755–2700431</span>
-        </p>
-    </div>
+        <!-- Year Tabs -->
+        <div class="year-tabs-container">
+            <div class="year-tabs">
+                <button class="year-tab active" data-year="2025"> <span><img
+                            src="../public/homepage/icons/Group 39569.png" alt=""></span> Winner 2025</button>
+                <button class="year-tab" data-year="2024"> <span><img src="../public/homepage/icons/Group 39569.png"
+                            alt=""></span> Winner 2024</button>
+                <button class="year-tab" data-year="2023"> <span><img src="../public/homepage/icons/Group 39569.png"
+                            alt=""></span> Winner 2023</button>
+                <button class="year-tab" data-year="2022"> <span><img src="../public/homepage/icons/Group 39569.png"
+                            alt=""></span> Winner 2022</button>
+                <button class="year-tab" data-year="2021"> <span><img src="../public/homepage/icons/Group 39569.png"
+                            alt=""></span> Winner 2021</button>
+            </div>
+        </div>
 
-    <div class="footer-links">
-        <h3>Useful Links</h3>
-        <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Categories</a></li>
-        <li><a href="#">Register</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Important Dates</a></li>
-        <li><a href="#">Winners</a></li>
-        <li><a href="#">Instructions</a></li>
-        </ul>
-    </div>
-    </div>
+        <!-- Year Tables Container -->
+        <div class="year-tables-wrapper">
+            <!-- Year content will be dynamically injected by JS -->
+        </div>
+    </section>
 
-    <!-- Right (Contact Form) -->
-    <div class="footer-right">
-    <form class="contact-form">
-        <input type="text" placeholder="Full Name" required />
-        <input type="email" placeholder="Email Address" required />
-        <input type="tel" placeholder="Contact Number" required />
-        <textarea placeholder="Message" rows="4" required></textarea>
-        <label class="form-checkbox">
-        <input type="checkbox" required /> I am not Robot.
-        </label>
-        <button type="submit">Send Message</button>
-    </form>
+    <!-- Announcement Marquee -->
+    <section class="marquee-section-container-for-showcasing">
+        <section class="announcement-bar-for-showcasing">
+            <div class="marquee-wrapper-for-showcasing">
+                <div class="marquee-content-for-showcasing">
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                    <span>shodh shikhar 2025</span>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- footer section -->
+    <footer class="footer-section">
+
+        <div class="footer-section-clip-path">
+            <div class="footer-section-clip-path-img">
+                <img src="../public/homepage/footer-clip-img.png" alt="">
+            </div>
+        </div>
+        <div class="footer-container">
+            <!-- Left -->
+            <div class="footer-left">
+                <h2>Our Address</h2>
+                <div class="footer-contact">
+                    <p>
+                        <img src="../public/homepage/icons/footer-location-icon.png" alt="">
+                        <span>Rabindranath Tagore University<br />
+                            Mendua, Post: Bhopal, Near Bangrasia Chauraha,
+                            Bhopal–Chiklod Road, Bhopal (M.P.)</span>
+                    </p>
+                    <h2>Contact Details</h2>
+                    <p>
+                        <img src="../public/homepage/icons/footer-contact-icon.png" alt="">
+                        <span>Visit Wensite or Call us <br>
+                            <span>shodhshikhar@rntuniversity.ac.in / 0755–2700431</span>
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Important Dates</a></li>
+                        <li><a href="#">Winners</a></li>
+                        <li><a href="#">Instructions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right (Contact Form) -->
+            <div class="footer-right">
+                <form class="contact-form">
+                    <input type="text" placeholder="Full Name" required />
+                    <input type="email" placeholder="Email Address" required />
+                    <input type="tel" placeholder="Contact Number" required />
+                    <textarea placeholder="Message" rows="4" required></textarea>
+                    <label class="form-checkbox">
+                        <input type="checkbox" required /> I am not Robot.
+                    </label>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+        <img src="../public/static/shodh-shikhar-logo.png" alt="logo" class="footer-logo" />
+        <p>© 2025 shodhshikhar. All rights reserved.</p>
+
+        <div class="footer-social">
+            <a href="https://www.facebook.com/RNTUniv/"><img src="../public/homepage/icons/footer-social-icon1.png"
+                    alt=""></a>
+            <a href="https://www.instagram.com/rntu_official"><img
+                    src="../public/homepage/icons/footer-social-icon2.png" alt=""></a>
+            <a href="https://x.com/RNTUnivBhopal"><img src="../public/homepage/icons/footer-social-icon3.png"
+                    alt=""></a>
+            <a href="https://www.youtube.com/channel/UCCk_1YWi3Cf7fv5V5nPVFFw"><img
+                    src="../public/homepage/icons/footer-social-icon4.png" alt=""></a>
+        </div>
     </div>
-</div>
-</footer>
-
-<!-- Bottom -->
-<div class="footer-bottom">
-<img
-    src="../public/static/shodh-shikhar-logo.png"
-    alt="logo"
-    class="footer-logo"
-/>
-<p>© 2025 shodhshikhar. All rights reserved.</p>
-
-<div class="footer-social">
-    <a href="https://www.facebook.com/RNTUniv/"><img src="../public/homepage/icons/footer-social-icon1.png" alt=""></a>
-    <a href="https://www.instagram.com/rntu_official"><img src="../public/homepage/icons/footer-social-icon2.png" alt=""></a>
-    <a href="https://x.com/RNTUnivBhopal"><img src="../public/homepage/icons/footer-social-icon3.png" alt=""></a>
-    <a href="https://www.youtube.com/channel/UCCk_1YWi3Cf7fv5V5nPVFFw"><img src="../public/homepage/icons/footer-social-icon4.png" alt=""></a>
-</div>
-</div>
 
 
     <!-- javascript -->
@@ -204,4 +304,5 @@
     <!-- PDF and Excel Export -->
 
 </body>
+
 </html>
