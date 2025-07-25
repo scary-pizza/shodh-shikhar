@@ -167,6 +167,13 @@
   object-fit: contain;
 }
 
+@media screen and (max-width: 1499px) and (min-width: 1200px){
+  .pub-content {
+  margin-left: 2rem;
+}
+}
+
+
 
 @media screen and (min-width: 1700px) {
   .publications-section {

@@ -198,6 +198,7 @@
 .host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content {
   padding: 1.5rem;
   text-align: left;
+  align-content: center;
 }
 
 .host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content .sponsor-logo {
@@ -214,6 +215,10 @@
   font-size: 1.25rem;
   margin-bottom:0.5rem;
   color: #555;
+  line-height: 1.5;
+  font-family: var(--ff-popins);
+  text-align: justify;
+  font-weight: 500;
 }
 
 .host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content  ul {
@@ -244,6 +249,15 @@
 .host-university .co-sponsor-section .co-sponsor-logos img {
   width: 34rem;
   object-fit: contain;
+}
+
+
+/* (max-width: 1500px) and (min-width: 1200px) */
+
+@media screen and (max-width: 1500px) and (min-width: 1200px){
+  .host-university .co-sponsor-section .sponsor-grid .sponsor-card .sponsor-content .sponsor-logo{
+    width: 17REM;
+  }
 }
 
 @media screen and (min-width: 1700px) {

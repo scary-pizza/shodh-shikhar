@@ -233,6 +233,9 @@
   .about-patron .patron-message-bottom{
     margin-top: 5rem;
   }
+  .patron-info-bottom{
+    margin-left: 15rem;
+  }
 }
 
 /*(max-width: 1500px) and (min-width: 1024px)*/
